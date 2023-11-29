@@ -1,16 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".MriegoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título "MODO RIEGO" -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Modo Riego"
-        android:textSize="50dp"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:text="MODO RIEGO"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/my_custom_font"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:background="#80000000"
+        android:padding="16dp"/>
 
-</FrameLayout>
+    <!-- Botón 1 -->
+    <Button
+        android:id="@+id/btnBoton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:background="#3498db"
+        android:text="RIEGO MANUAL"
+        android:textColor="@android:color/white" />
+
+    <!-- Texto encima de Botón 1 -->
+    <TextView
+        android:id="@+id/textViewEstadoBoton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: Apagado"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnBoton1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Botón 2 -->
+    <Button
+        android:id="@+id/btnBoton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RIEGO AUTOMATICO"
+        android:textColor="@android:color/white"
+        android:background="#2ecc71"
+        android:layout_below="@id/btnBoton1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <!-- Texto encima de Botón 2 -->
+    <TextView
+        android:id="@+id/textViewEstadoBoton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: Apagado"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnBoton2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Botón 3 -->
+    <Button
+        android:id="@+id/btnBoton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RIEGO HUMEDAD"
+        android:textColor="@android:color/white"
+        android:background="#e74c3c"
+        android:layout_below="@id/btnBoton2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <!-- Texto encima de Botón 3 -->
+    <TextView
+        android:id="@+id/textViewEstadoBoton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: Apagado"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnBoton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATOS DE AGUA"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnBoton2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 mililitros"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnBoton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+</RelativeLayout>
