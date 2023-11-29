@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colores para el tema oscuro -->
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#1A237E</color>
+    <color name="colorAccent">#E91E63</color>
+    <color name="textColorDarkMode">#FFFFFF</color>
+
+    <!-- Otros colores para el modo oscuro -->
+
+</resources>

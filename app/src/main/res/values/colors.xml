@@ -8,5 +8,10 @@
     <color name="blanco">#FFFFFF</color>
     <color name="negro">#000000</color>
 
+    <!-- Colores para el tema claro -->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="colorAccent">#FF4081</color>
+
 
 </resources>
