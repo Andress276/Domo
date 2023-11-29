@@ -6,10 +6,15 @@
     android:gravity="bottom"
     android:padding="16dp"
     android:background="@drawable/img2"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    >
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-
+    <ImageView
+        android:layout_width="154dp"
+        android:layout_height="154dp"
+        android:layout_gravity="center"
+        android:paddingBottom="43dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo2"/>
 
 
 </LinearLayout>

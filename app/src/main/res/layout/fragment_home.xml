@@ -8,22 +8,27 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <!-- fragment_home.xml -->
+
     <ImageView
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="290dp"
+        android:layout_height="386dp"
         android:layout_gravity="center"
+        android:layout_marginTop="9dp"
+        android:paddingBottom="95dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
 
     <TextView
+        android:id="@+id/textViewWelcomeHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BIENVENIDOS"
-        android:textSize="34sp"
+        android:text="BIENVENIDO"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="74dp"
         android:fontFamily="@font/my_custom_font"
         android:shadowColor="#80000000"
         android:shadowDx="2"
@@ -31,5 +36,25 @@
         android:shadowRadius="4"
         android:background="#80000000"
         android:padding="16dp"/>
+
+
+    <TextView
+        android:id="@+id/textViewWelcomeHome2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DISEÑAMOS SISTEMAS A TU MEDIDA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="540dp"
+        android:fontFamily="@font/my_custom_font"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:background="#54E4E4E4"
+        android:padding="0dp"/>
+
 
 </FrameLayout>

@@ -37,6 +37,13 @@
                 android:id="@+id/nav_riego"
                 android:title="Riego"
                 android:icon="@drawable/baseline_filter_vintage_24"/>
+
+            <item
+                android:id="@+id/nav_separador1"
+                android:title=""
+                android:checkable="false"
+                android:enabled="false"
+                android:visible="true"/>
         </group>
 
         <item

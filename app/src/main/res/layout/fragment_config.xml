@@ -1,17 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfigFragment">
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título de la configuración -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Configuracion"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="40dp"
-        android:textColor="@color/verde"/>
+        android:text="Configuración"
+        android:textColor="@color/verde"
+        android:textSize="40sp"
+        android:layout_marginTop="50dp"
+        android:paddingBottom="0dp"/>
 
-</FrameLayout>
+    <!-- Botón para cambiar tema -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Tema"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Cuadro de selección para idioma -->
+    <Spinner
+        android:id="@+id/spinnerIdioma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Interruptor para notificaciones -->
+    <Switch
+        android:id="@+id/switchNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Recibir Notificaciones" />
+
+    <!-- Lista de opciones avanzadas -->
+    <ListView
+        android:id="@+id/listaOpcionesAvanzadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:background="@color/white"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Opción 1"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Opción 2"
+        android:textColor="@color/black"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habilitar Función X"
+        android:checked="false"
+        android:textColor="@color/black"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Opción Y"
+        android:checked="false"
+        android:textColor="@color/black"/>
+
+    <SeekBar
+        android:id="@+id/seekBarVolumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="50"
+        android:textColor="@color/black"/>
+</LinearLayout>
