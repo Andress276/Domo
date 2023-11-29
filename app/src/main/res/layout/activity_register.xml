@@ -23,7 +23,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="594dp"
-                android:background="#FFFFFF">
+                android:background="@drawable/rounded_backgroundcontac"
+                >
 
 
                 <ImageView
@@ -109,7 +110,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@color/verde"
+                    android:background="@drawable/rounded_backgroundboton"
                     android:text="Registrarse"
                     android:textColor="#FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"

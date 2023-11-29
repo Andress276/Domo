@@ -24,7 +24,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="540dp"
-                android:background="#FFFFFF">
+                android:background="@drawable/rounded_backgroundcontac">
 
                 <ImageView
                     android:id="@+id/imagelogi"
@@ -87,7 +87,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/verde"
+                    android:background="@drawable/rounded_backgroundboton"
                     android:text="Iniciar Sesión"
                     android:textColor="#FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".SomosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Imagen de encabezado -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="255dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/somos_header_image" />
+
+    <!-- Título "Quienes Somos" -->
     <TextView
+        android:id="@+id/textViewQuienesSomos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quienes Somos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:textSize="40sp"
+        android:textColor="@android:color/white" />
+
+    <!-- Contenido informativo con ScrollView -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Quienes Somos"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textColor="@color/verde"/>
+        android:layout_below="@id/textViewQuienesSomos"
+        android:layout_marginTop="10dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Ejemplo de información -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenidos a nuestra aplicación. En 'Quienes Somos', nos esforzamos por ofrecer información relevante y útil sobre nuestra organización. Nuestra misión es... (continuar con la descripción de la organización)."
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+            <!-- Más información -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón para acceder a más detalles o acciones -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Más Detalles"
+        android:background="@drawable/rounded_backgroundboton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp" />
+
+</RelativeLayout>

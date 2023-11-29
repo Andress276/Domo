@@ -6,12 +6,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/fondo"
     tools:context=".PerfilFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="Actualizar Perfil"/>
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR PERFIL"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/my_custom_font"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:background="#80000000"
+        android:padding="16dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,7 +36,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:padding="26dp"
             android:background="#FFFFFF">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -79,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Actualizar"
-                android:background="@color/verde"
+                android:background="@drawable/rounded_backgroundboton"
                 android:textColor="#FFFFFF"
                 app:layout_constraintTop_toBottomOf="@id/editTextPassword"
                 app:layout_constraintStart_toStartOf="parent"

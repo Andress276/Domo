@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".ContacFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <!-- Use ScrollView to make the form scrollable -->
+
+    <ImageView
+        android:layout_width="351dp"
+        android:layout_height="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/contact_header_image" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Contactanos"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textColor="@color/verde"/>
+        android:layout_marginTop="160dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/contactFormLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/rounded_backgroundcontac"
+            android:orientation="vertical"
+            android:padding="36dp">
+
+            <!-- Your form elements go here -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress" />
+
+            <!-- Additional elements -->
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="top"
+                android:hint="Mensaje"
+                android:minLines="3" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Número de Teléfono"
+                android:inputType="number"
+                />
+
+
+            <!-- Ensure that the button is visible -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_backgroundboton"
+                android:text="Enviar"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
