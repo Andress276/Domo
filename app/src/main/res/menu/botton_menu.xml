@@ -12,8 +12,9 @@
         android:icon="@drawable/baseline_volunteer_activism_24"/>
 
     <item
-        android:title=""
-        android:enabled="true"/>
+        android:id="@+id/bottom_Usuarios"
+        android:title="Usuarios"
+        android:icon="@drawable/baseline_group_add_24"/>
 
     <item
         android:id="@+id/bottom_contact"

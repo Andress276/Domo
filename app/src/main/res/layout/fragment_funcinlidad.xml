@@ -35,6 +35,7 @@
 
         <!-- Sensor -->
         <FrameLayout
+            android:id="@+id/sensor_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -63,6 +64,7 @@
 
         <!-- Registros -->
         <FrameLayout
+            android:id="@+id/registros_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -91,6 +93,7 @@
 
         <!-- Modo Riego -->
         <FrameLayout
+            android:id="@+id/modo_riego_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -98,7 +101,6 @@
             android:layout_margin="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="190dp"
-
             android:background="@drawable/rounded_background">
 
             <ImageView
@@ -119,6 +121,7 @@
 
         <!-- Cultivos -->
         <FrameLayout
+            android:id="@+id/cultivos_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
