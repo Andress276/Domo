@@ -1,59 +1,70 @@
 package com.example.oficialapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.oficialapp.data.RetrofitClientSen
+import com.example.oficialapp.databinding.FragmentRegistrosBinding
+import com.example.oficialapp.response.SensorData
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RegistrosFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RegistrosFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentRegistrosBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registros, container, false)
+        binding = FragmentRegistrosBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegistrosFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegistrosFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Configuración del RecyclerView
+        val recyclerView = binding.recyclerViewDatos
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // Llamada a la API para obtener los datos
+        obtenerDatosDeAPI()
+    }
+
+    private fun obtenerDatosDeAPI() {
+        val apiService = RetrofitClientSen.create().getSensorData()
+
+        apiService.enqueue(object : Callback<List<SensorData>> {
+            override fun onResponse(call: Call<List<SensorData>>, response: Response<List<SensorData>>) {
+                if (response.isSuccessful) {
+                    val sensorDataList = response.body()
+                    if (sensorDataList != null) {
+                        // Procesar la lista de objetos SensorData obtenidos
+                        mostrarDatosEnRecyclerView(sensorDataList)
+                    } else {
+                        Log.e("Retrofit", "Error: Respuesta vacía")
+                    }
+                } else {
+                    Log.e("Retrofit", "Error en la respuesta: ${response.code()}")
                 }
             }
+
+            override fun onFailure(call: Call<List<SensorData>>, t: Throwable) {
+                Log.e("Retrofit", "Error de conexión: ${t.message}")
+            }
+        })
+    }
+
+    private fun mostrarDatosEnRecyclerView(sensorDataList: List<SensorData>) {
+        val adapter = SensorDataAdapter(sensorDataList)
+        binding.recyclerViewDatos.adapter = adapter
     }
 }
+
+

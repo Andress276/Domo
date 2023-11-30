@@ -37,5 +37,16 @@ data class Cultivo(
     // Otros atributos según tus necesidades
 )
 
+data class SensorData(
+    val id: Int,
+    val humedad: Int,
+    val temperatura: Int,
+    val humedad_suelo: Int,
+    val flujo_agua: Int,
+    val fecha_hora: String,
+    val created_at: String,
+    val updated_at: String
+)
+
 
 

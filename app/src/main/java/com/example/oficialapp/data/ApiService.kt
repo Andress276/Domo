@@ -1,6 +1,7 @@
 package com.example.oficialapp.data
 
 import com.example.oficialapp.response.LoginResponse
+import com.example.oficialapp.response.SensorData
 import com.example.oficialapp.response.UserProfile
 import com.example.oficialapp.response.UserResponse
 import retrofit2.Call
@@ -24,5 +25,7 @@ interface ApiService {
     @PUT("api/profile")
     fun updateProfile(@Header("Authorization") token: String, @Body updatedProfile: UserProfile): Call<UserProfile>
 
-
+    @GET("api/sensor")
+    fun getSensorData(): Call<List<SensorData>>
 }
+
