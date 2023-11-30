@@ -68,8 +68,10 @@ class CasaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_cerrar -> {
                 // Lógica para cerrar sesión (borrar tokens, limpiar datos de sesión, etc.)
                 // Por ejemplo, puedes utilizar SharedPreferences para limpiar datos de sesión.
-                val sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
+                val sharedPreferences = getSharedPreferences("YOUR_PREFS_NAME", MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
+
+                editor.remove("USER_NAME")
                 editor.clear()
                 editor.apply()
 

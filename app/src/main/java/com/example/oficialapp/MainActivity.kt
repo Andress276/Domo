@@ -14,6 +14,7 @@ import com.example.oficialapp.data.ApiService
 import com.example.oficialapp.data.RetrofitClient
 import com.example.oficialapp.data.RetrofitClientt
 import com.example.oficialapp.response.LoginResponse
+import com.example.oficialapp.response.User
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -62,7 +63,33 @@ class MainActivity : AppCompatActivity() {
         Log.d("TOKEN_SAVED", "Token guardado: $token")
     }
 
+    private fun saveUsernameToSharedPreferences(username: String) {
+        val sharedPreferences: SharedPreferences = getSharedPreferences("YOUR_PREFS_NAME", Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+        editor.putString("USERNAME_KEY", username)
+        editor.apply()
+        Log.d("USERNAME_SAVED", "Username guardado: $username")
+    }
 
+    fun handleLoginResponse(loginResponse: LoginResponse?) {
+        if (loginResponse != null) {
+            val token = loginResponse.token // Obtiene el token de LoginResponse
+            saveTokenToSharedPreferences(token) // Guarda el token en SharedPreferences
+
+            val user: User = loginResponse.user // Obtiene el objeto User de LoginResponse
+            val username = user.name // Obtiene el nombre de usuario del objeto User
+            Log.d("USERNAME_DEBUG", "Nombre de usuario obtenido: $username")
+
+            if(username.isNotEmpty()){
+                saveUsernameToSharedPreferences(username) // Guarda el nombre de usuario en SharedPreference
+            }else{
+                Log.e("USERNAME_ERROR", "El nombre de usuario está vacío o nulo.")
+            }
+        } else {
+
+            }
+            // Manejar la respuesta nula o incorrecta
+        }
 
     private fun isValidCredentials(email: String, password: String): Boolean {
         return email.isNotEmpty() && password.isNotEmpty()
@@ -85,10 +112,10 @@ class MainActivity : AppCompatActivity() {
                     if (loginResponse != null) {
                         val token = loginResponse.token
                         saveTokenToSharedPreferences(token)
-                        // Aquí puedes guardar el token en SharedPreferences o utilizarlo según necesites
-                        // Por ejemplo, iniciar la siguiente actividad
+                        // Aquí puedes guardar el token en SharedPreferences
 
 
+                        //iniciar la siguiente actividad
                         val intent = Intent(this@MainActivity, CasaActivity::class.java)
                         startActivity(intent)
                         finish()

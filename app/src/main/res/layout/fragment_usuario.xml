@@ -12,18 +12,19 @@
         android:id="@+id/textViewWelcomeHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:padding="16dp"
         android:text="Crud Users"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:layout_marginTop="74dp"
         android:fontFamily="@font/my_custom_font"
         android:shadowColor="#80000000"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="4"
-        android:background="#80000000"
-        android:padding="16dp"/>
+        android:background="#80000000" />
+
 
 </FrameLayout>

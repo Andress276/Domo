@@ -1,5 +1,6 @@
 package com.example.oficialapp.response
 
+import com.google.gson.annotations.SerializedName
 data class UserResponse(
     val message: String,
     val user: User // Modelo de datos para el usuario
@@ -25,4 +26,16 @@ data class User(
     val profile_photo: String?, // Puede ser null
     // Otros campos del usuario según tu API
 )
+
+data class Cultivo(
+    val id: Int,
+    val nombre: String,
+    val descripcion: String,
+    val nivel_humedad_optimo: Int,
+    val tipo_plantas: String,
+    val fecha_siembra: String
+    // Otros atributos según tus necesidades
+)
+
+
 

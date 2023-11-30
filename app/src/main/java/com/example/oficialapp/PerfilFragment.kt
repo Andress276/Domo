@@ -68,6 +68,12 @@ class PerfilFragment : Fragment() {
                 if (response.isSuccessful) {
                     val userProfile = response.body()
                     userProfile?.let {
+
+                        //guarda el nombre de usurio
+                        val editor = sharedPreferences.edit()
+                        editor.putString("USER_NAME", it.name)
+                        editor.apply()
+
                         binding.editTextNamee.setText(it.name)
                         binding.editTextEmaill.setText(it.email)
                         binding.editTextPasswordd.setText(it.password)
