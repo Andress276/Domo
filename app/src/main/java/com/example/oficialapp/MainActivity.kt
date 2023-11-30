@@ -121,10 +121,22 @@ class MainActivity : AppCompatActivity() {
                         finish()
                     }
                 } else {
-                    Toast.makeText(this@MainActivity, "Inicio de sesión fallido", Toast.LENGTH_SHORT).show()
+                    if (response.code() == 401) {
+                        // Código 401 indica un inicio de sesión fallido
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Credenciales inválidas",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Inicio de sesión fallido",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
-
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                 Toast.makeText(this@MainActivity, "Error de red", Toast.LENGTH_SHORT).show()
             }

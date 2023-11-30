@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oficialapp.data.CultivoService
@@ -70,8 +71,10 @@ class CultivosFragment : Fragment() {
                     if (response.isSuccessful) {
                         val cultivoCreado = response.body()
                         // Actualizar la interfaz con el cultivo creado si es necesario
+                        Toast.makeText(requireContext(), "Cultivo creado exitosamente", Toast.LENGTH_SHORT).show()
                     } else {
                         // Manejar errores de la API
+                        Toast.makeText(requireContext(), "Error al crear cultivo", Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -141,13 +144,16 @@ class CultivosFragment : Fragment() {
                     if (response.isSuccessful) {
                         val cultivoActualizado = response.body()
                         // Actualizar la interfaz con el cultivo actualizado si es necesario
+                        Toast.makeText(requireContext(), "Cultivo actualizado exitosamente", Toast.LENGTH_SHORT).show()
                     } else {
                         // Manejar errores de la API
+                        Toast.makeText(requireContext(), "Error al actualizar cultivo", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<Cultivo>, t: Throwable) {
                     // Manejar errores de la conexión
+                    Toast.makeText(requireContext(), "Error de conexión al actualizar cultivo", Toast.LENGTH_SHORT).show()
                 }
             })
         }
@@ -159,13 +165,16 @@ class CultivosFragment : Fragment() {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
                         // Cultivo eliminado exitosamente
+                        Toast.makeText(requireContext(), "Cultivo eliminado exitosamente", Toast.LENGTH_SHORT).show()
                     } else {
                         // Manejar errores de la API
+                        Toast.makeText(requireContext(), "Error al eliminar cultivo", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     // Manejar errores de la conexión
+                    Toast.makeText(requireContext(), "Error de conexión al eliminar cultivo", Toast.LENGTH_SHORT).show()
                 }
             })
         }

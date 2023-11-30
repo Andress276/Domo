@@ -3,15 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo"
     tools:context=".CalifFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/calif"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Calificanos"
+        android:layout_marginTop="75dp"
         android:gravity="center"
-        android:textSize="40dp"
-        android:textColor="@color/verde"/>
+        android:textSize="40sp"
+        android:textColor="@color/black" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="200dp"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        android:progressTint="@color/dorado"/>
+
+    <EditText
+        android:id="@+id/editTextComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:gravity="center"
+        android:hint="Deja tu comentario aquí"
+        android:textColorHint="@color/black"/>
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:onClick="enviarCalificacion" />
 
 </FrameLayout>
+
