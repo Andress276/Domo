@@ -27,6 +27,7 @@ class CultivosFragment : Fragment() {
 
     private lateinit var cultivoService: CultivoService
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,6 +36,10 @@ class CultivosFragment : Fragment() {
 
         // Inicializar cultivoService
         cultivoService = RetrofitClientCu.cultivoService
+
+
+
+
 
         val editTextNombreNuevo = view.findViewById<EditText>(R.id.editTextNombreNuevo)
         val editTextDescripcionNuevo = view.findViewById<EditText>(R.id.editTextDescripcionNuevo)
@@ -165,10 +170,32 @@ class CultivosFragment : Fragment() {
             })
         }
 
-        // Obtén la referencia al RecyclerView
-        val recyclerViewCultivos = view.findViewById<RecyclerView>(R.id.recyclerViewCultivos)
-        recyclerViewCultivos.layoutManager = LinearLayoutManager(requireContext()) // Puedes elegir otro LayoutManager si lo deseas
 
+        val recyclerViewCultivos = view.findViewById<RecyclerView>(R.id.recyclerViewCultivos)
+
+        // Configurar el RecyclerView
+        val layoutManager = LinearLayoutManager(requireContext())
+        recyclerViewCultivos.layoutManager = layoutManager
+
+        // Aquí deberías tener un CultivoAdapter configurado previamente
+        val cultivoAdapter = CultivoAdapter() // Reemplaza CultivoAdapter con tu propio adapter
+        recyclerViewCultivos.adapter = cultivoAdapter
+
+        // Realizar la llamada a la API para obtener los cultivos
+        cultivoService.obtenerCultivos().enqueue(object : Callback<List<Cultivo>> {
+            override fun onResponse(call: Call<List<Cultivo>>, response: Response<List<Cultivo>>) {
+                if (response.isSuccessful) {
+                    val cultivos = response.body()
+                    cultivoAdapter.actualizarCultivos(cultivos ?: emptyList()) // Actualizar el adapter con los datos recibidos
+                } else {
+                    // Manejar errores de la API
+                }
+            }
+
+            override fun onFailure(call: Call<List<Cultivo>>, t: Throwable) {
+                // Manejar errores de la conexión
+            }
+        })
 
         return view
     }
