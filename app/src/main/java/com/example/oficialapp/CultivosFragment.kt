@@ -38,10 +38,6 @@ class CultivosFragment : Fragment() {
         // Inicializar cultivoService
         cultivoService = RetrofitClientCu.cultivoService
 
-
-
-
-
         val editTextNombreNuevo = view.findViewById<EditText>(R.id.editTextNombreNuevo)
         val editTextDescripcionNuevo = view.findViewById<EditText>(R.id.editTextDescripcionNuevo)
         val editTextNivelHumedadOptimoNuevo = view.findViewById<EditText>(R.id.editTextNivelHumedadOptimoNuevo)

@@ -71,14 +71,14 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Habilitar Función X"
+        android:text="Habilitar Alarma X"
         android:checked="false"
         android:textColor="@color/black"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccionar Opción Y"
+        android:text="Volumen de alarma"
         android:checked="false"
         android:textColor="@color/black"/>
 

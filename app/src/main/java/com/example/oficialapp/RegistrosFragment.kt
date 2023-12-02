@@ -7,64 +7,62 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.oficialapp.data.RetrofitClientSen
-import com.example.oficialapp.databinding.FragmentRegistrosBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.example.oficialapp.data.ApiService
 import com.example.oficialapp.response.SensorData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class RegistrosFragment : Fragment() {
 
-    private lateinit var binding: FragmentRegistrosBinding
+    private lateinit var recyclerView: RecyclerView
+    private var adapter: SensorDataAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRegistrosBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+        val view = inflater.inflate(R.layout.fragment_registros, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // Configuración del RecyclerView
-        val recyclerView = binding.recyclerViewDatos
+        recyclerView = view.findViewById(R.id.recyclerViewDatos)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = SensorDataAdapter()
 
-        // Llamada a la API para obtener los datos
-        obtenerDatosDeAPI()
+        recyclerView.adapter = adapter
+
+        fetchDataFromApi()
+
+        return view
     }
 
-    private fun obtenerDatosDeAPI() {
-        val apiService = RetrofitClientSen.create().getSensorData()
+    private fun fetchDataFromApi() {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://domofticaweb-production.up.railway.app/api/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
 
-        apiService.enqueue(object : Callback<List<SensorData>> {
+        val service = retrofit.create(ApiService::class.java)
+        val call = service.getSensorData()
+
+        call.enqueue(object : Callback<List<SensorData>> {
             override fun onResponse(call: Call<List<SensorData>>, response: Response<List<SensorData>>) {
                 if (response.isSuccessful) {
                     val sensorDataList = response.body()
-                    if (sensorDataList != null) {
-                        // Procesar la lista de objetos SensorData obtenidos
-                        mostrarDatosEnRecyclerView(sensorDataList)
-                    } else {
-                        Log.e("Retrofit", "Error: Respuesta vacía")
+                    sensorDataList?.let {
+                        adapter?.setData(it)
                     }
                 } else {
-                    Log.e("Retrofit", "Error en la respuesta: ${response.code()}")
+                    // Manejar errores de respuesta aquí
                 }
             }
 
             override fun onFailure(call: Call<List<SensorData>>, t: Throwable) {
-                Log.e("Retrofit", "Error de conexión: ${t.message}")
+                // Manejar errores de conexión aquí
+                Log.e("API_CALL", "Error al obtener datos: ${t.message}")
             }
         })
     }
-
-    private fun mostrarDatosEnRecyclerView(sensorDataList: List<SensorData>) {
-        val adapter = SensorDataAdapter(sensorDataList)
-        binding.recyclerViewDatos.adapter = adapter
-    }
 }
-
-

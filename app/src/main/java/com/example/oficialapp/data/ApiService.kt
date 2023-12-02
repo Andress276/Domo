@@ -4,6 +4,8 @@ import com.example.oficialapp.response.LoginResponse
 import com.example.oficialapp.response.SensorData
 import com.example.oficialapp.response.UserProfile
 import com.example.oficialapp.response.UserResponse
+import com.google.gson.JsonArray
+import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -12,12 +14,12 @@ interface ApiService {
     @POST("api/users")
     fun registerUser(
         @Body userData: HashMap<String, String>
-    ): Call<UserResponse> // Define UserResponse según la estructura de tu respuesta
+    ): Call<UserResponse>
 
     @POST("api/login")
     fun login(
         @Body credentials: HashMap<String, String>
-    ): Call<LoginResponse> // Define LoginResponse según la estructura de tu respuesta
+    ): Call<LoginResponse>
 
     @GET("api/profile")
     fun getProfile(@Header("Authorization") token: String): Call<UserProfile>
@@ -25,7 +27,7 @@ interface ApiService {
     @PUT("api/profile")
     fun updateProfile(@Header("Authorization") token: String, @Body updatedProfile: UserProfile): Call<UserProfile>
 
-    @GET("api/sensor")
+    @GET("sensor")
     fun getSensorData(): Call<List<SensorData>>
 }
 

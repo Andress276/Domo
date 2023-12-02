@@ -1,6 +1,7 @@
 package com.example.oficialapp.response
 
-import com.google.gson.annotations.SerializedName
+import java.time.LocalDateTime
+
 data class UserResponse(
     val message: String,
     val user: User // Modelo de datos para el usuario
@@ -15,7 +16,7 @@ data class LoginResponse(
 data class UserProfile(
     val name: String,
     val email: String,
-    val password: String // Cantidad de campos actualizados, por ejemplo
+    val password: String // Cantidad de campos actualizados
 )
 
 data class User(
@@ -23,8 +24,8 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    val profile_photo: String?, // Puede ser null
-    // Otros campos del usuario según tu API
+    val profile_photo: String?,
+
 )
 
 data class Cultivo(
@@ -34,7 +35,7 @@ data class Cultivo(
     val nivel_humedad_optimo: Int,
     val tipo_plantas: String,
     val fecha_siembra: String
-    // Otros atributos según tus necesidades
+
 )
 
 data class SensorData(

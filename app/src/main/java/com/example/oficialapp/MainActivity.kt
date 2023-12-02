@@ -21,9 +21,6 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
-
-
-
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button

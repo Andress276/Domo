@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/idTextView"
+        android:id="@+id/textViewID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -16,7 +16,7 @@
         android:layout_marginBottom="4dp"/>
 
     <TextView
-        android:id="@+id/humedadTextView"
+        android:id="@+id/textViewHumedad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -24,10 +24,50 @@
         android:layout_marginBottom="4dp"/>
 
     <TextView
-        android:id="@+id/temperaturaTextView"
+        android:id="@+id/textViewTemperatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="#333333"/>
+
+    <TextView
+        android:id="@+id/textViewHumedadSuelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewFlujoAgua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>
+
+    <!--<TextView
+        android:id="@+id/textViewFechaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>-->
+
+    <TextView
+        android:id="@+id/textViewCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>
+
+    <!--<TextView
+        android:id="@+id/textViewUpdatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>-->
 
 </LinearLayout>
