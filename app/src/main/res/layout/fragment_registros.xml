@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".RegistrosFragment">
 .
 
@@ -23,6 +24,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:background="@drawable/rounded_backgroundregistros"
+    />
 
 </FrameLayout>

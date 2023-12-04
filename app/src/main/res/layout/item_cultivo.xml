@@ -9,21 +9,25 @@
         android:id="@+id/containerLayout"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:background="@drawable/rounded_backgroundcontac"
-        tools:ignore="MissingConstraints"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_backgroundcultivos"
+        android:dividerHeight="8dp"
         android:padding="15dp"
         android:paddingBottom="15dp"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <TextView
             android:id="@+id/nombreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Nombre:"
+            android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="20dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -32,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Descripción:"
+            android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nombreTextView"
             tools:ignore="MissingConstraints" />
@@ -42,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Nivel de humedad:"
+            android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descripcionTextView"
             tools:ignore="MissingConstraints" />
@@ -52,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Tipo de plantas:"
+            android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nivelHumedadTextView"
             tools:ignore="MissingConstraints" />
@@ -62,10 +69,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Fecha de siembra:"
+            android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tipoPlantasTextView"
             tools:ignore="MissingConstraints" />
 
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

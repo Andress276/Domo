@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo2"
     tools:context=".CultivosFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -20,23 +21,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"/>
 
-            <!-- Sección para crear un cultivo -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Cultivos"
+                android:textSize="58sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
             <LinearLayout
                 android:id="@+id/layoutCrearCultivo"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FFFFFF"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="visible"
+                android:background="@drawable/rounded_backgroundcultivos2">
+
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="179dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="8dp"
                     android:text="Crear Nuevo Cultivo"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="16dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginEnd="16dp"
+                    />
 
                 <!-- Campos para crear un nuevo cultivo -->
                 <EditText
@@ -44,8 +67,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombre"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    />
 
                 <EditText
                     android:id="@+id/editTextDescripcionNuevo"
@@ -53,13 +78,15 @@
                     android:layout_height="wrap_content"
                     android:hint="Descripción"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    android:textColor="#FFFFFF"/>
 
                 <EditText
                     android:id="@+id/editTextNivelHumedadOptimoNuevo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nivel de humedad óptimo"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -68,6 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tipo de plantas"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -76,6 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Fecha de siembra"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -84,32 +113,50 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Crear Cultivo"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    />
 
                 <!-- Contenido para crear un nuevo cultivo -->
                 <!-- ... (EditTexts y Button para crear un cultivo) ... -->
 
             </LinearLayout>
 
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+
             <!-- Sección para editar un cultivo -->
             <LinearLayout
                 android:id="@+id/layoutEditarCultivo"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_backgroundcultivos2"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="visible"
+                android:dividerHeight="8dp">
+
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="127dp"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="8dp"
                     android:text="Editar Cultivo"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="16dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginEnd="16dp"
+                    />
 
                 <!-- Campo para ingresar el ID del cultivo a editar -->
                 <EditText
@@ -127,6 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombre"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -135,6 +183,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Descripción"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -143,6 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nivel de humedad óptimo"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -151,6 +201,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tipo de plantas"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -159,6 +210,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Fecha de siembra"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
@@ -168,8 +220,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Buscar Cultivo"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"/>
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
 
                 <!-- Botón para enviar los datos editados y actualizar el cultivo -->
                 <Button
@@ -177,39 +232,52 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Actualizar Cultivo"
+                    android:visibility="visible"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
-                    android:visibility="visible"/>
+                    android:layout_marginEnd="16dp"/>
 
                 <!-- Contenido para editar un cultivo -->
                 <!-- ... (EditTexts y Buttons para editar un cultivo) ... -->
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
             <!-- Sección para eliminar un cultivo -->
             <LinearLayout
                 android:id="@+id/layoutEliminarCultivo"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_backgroundcultivos2"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="visible">
 
+                <!-- Campo para ingresar el ID del cultivo a eliminar -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eliminar Cultivo"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="8dp"/>
 
-                <!-- Campo para ingresar el ID del cultivo a eliminar -->
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Eliminar Cultivo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
                     android:id="@+id/editTextIDEliminar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ID del Cultivo a Eliminar"
+                    android:textColor="#FFFFFF"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:inputType="number"/>
@@ -220,23 +288,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eliminar Cultivo"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"/>
 
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
                 <!-- Contenido para eliminar un cultivo -->
                 <!-- ... (EditText y Button para eliminar un cultivo) ... -->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewCultivos"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:padding="5dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_cultivo" />
+
 
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCultivos"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_backgroundcultivos2"
+                android:clipToPadding="false"
+                android:padding="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_cultivo"
+
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
