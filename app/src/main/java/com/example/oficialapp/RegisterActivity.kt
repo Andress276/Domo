@@ -60,14 +60,21 @@ class RegisterActivity : AppCompatActivity() {
                             if (response.isSuccessful) {
                                 val userResponse = response.body()
                                 // Registro exitoso, puedes realizar acciones aquí, por ejemplo, mostrar un mensaje
+                                Toast.makeText(this@RegisterActivity, "Registro exitoso", Toast.LENGTH_SHORT).show()
+
+                                val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                                startActivity(intent)
+                                finish() // Finalizar la actividad actual
 
                             } else {
                                 // Manejar errores en la respuesta del servidor
+                                Toast.makeText(this@RegisterActivity, "Error en el registro", Toast.LENGTH_SHORT).show()
                             }
                         }
 
                         override fun onFailure(call: Call<UserResponse>, t: Throwable) {
                             // Manejar errores de conexión u otros errores
+                            Toast.makeText(this@RegisterActivity, "Error en el registro", Toast.LENGTH_SHORT).show()
                         }
                     })
             } else {

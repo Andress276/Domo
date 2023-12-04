@@ -5,13 +5,26 @@
     android:layout_height="match_parent"
     tools:context=".SensoresFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Sensores"
+        android:text="Ultimo Dato"
         android:textSize="50dp"
-        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="65dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="150dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/rounded_backgroundregistros"
         />
 
 

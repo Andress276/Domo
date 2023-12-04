@@ -42,7 +42,8 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -51,12 +52,13 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //splash
-    implementation ("com.airbnb.android:lottie:6.2.0")
+    implementation("com.airbnb.android:lottie:6.2.0")
 
     //api registro
-    implementation ("com.android.volley:volley:1.2.1")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("androidx.security:security-crypto:1.0.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.security:security-crypto:1.0.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+
 }

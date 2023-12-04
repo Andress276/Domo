@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         } else {
 
             }
-            // Manejar la respuesta nula o incorrecta
+
         }
 
     private fun isValidCredentials(email: String, password: String): Boolean {
@@ -105,11 +105,11 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
-                    // Maneja la respuesta del servidor después del inicio de sesión exitoso
+
                     if (loginResponse != null) {
                         val token = loginResponse.token
                         saveTokenToSharedPreferences(token)
-                        // Aquí puedes guardar el token en SharedPreferences
+                        //guardar el token en SharedPreferences
 
 
                         //iniciar la siguiente actividad
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 } else {
                     if (response.code() == 401) {
-                        // Código 401 indica un inicio de sesión fallido
+                        //indica un inicio de sesión fallido
                         Toast.makeText(
                             this@MainActivity,
                             "Credenciales inválidas",
