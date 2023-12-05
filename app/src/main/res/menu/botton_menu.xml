@@ -8,13 +8,9 @@
 
     <item
         android:id="@+id/bottom_Funcionalidad"
-        android:title="Opc"
+        android:title="Funciones"
         android:icon="@drawable/baseline_monitor_24"/>
 
-    <item
-        android:id="@+id/bottom_Usuarios"
-        android:title="Usuarios"
-        android:icon="@drawable/baseline_group_add_24"/>
 
     <item
         android:id="@+id/bottom_contact"

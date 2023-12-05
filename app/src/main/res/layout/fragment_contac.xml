@@ -97,7 +97,20 @@
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="0dp"/>
 
+
+
         </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="580dp"
+            android:layout_height="900dp"
+            android:layout_gravity="center"
+            android:paddingTop="950dp"
+            android:paddingBottom="175dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rama" />
+
 
     </RelativeLayout>
 

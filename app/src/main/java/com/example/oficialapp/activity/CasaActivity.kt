@@ -52,7 +52,6 @@ class CasaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.bottom_Funcionalidad -> replaceFragment(FuncinlidadFragment())
                 R.id.bottom_contact -> replaceFragment(ContacFragment())
                 R.id.bottom_somos -> replaceFragment(SomosFragment())
-                R.id.bottom_Usuarios -> replaceFragment(UsuarioFragment())
             }
             true // Indicar que se ha manejado la selección del elemento
         }
