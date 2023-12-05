@@ -6,7 +6,6 @@
     android:background="@drawable/fondo"
     tools:context=".ContacFragment">
 
-
     <!-- Use ScrollView to make the form scrollable -->
 
     <ImageView
@@ -55,6 +54,7 @@
                 android:textColorHint="#000000"/>
 
             <!-- Additional elements -->
+
             <EditText
                 android:id="@+id/editTextMessage"
                 android:layout_width="match_parent"
@@ -76,8 +76,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#000000"/>
 
-
             <!-- Ensure that the button is visible -->
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

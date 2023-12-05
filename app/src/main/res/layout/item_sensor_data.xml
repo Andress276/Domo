@@ -47,13 +47,7 @@
         android:textColor="#333333"
         android:layout_marginTop="8dp"/>
 
-    <!--<TextView
-        android:id="@+id/textViewFechaHora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="#333333"
-        android:layout_marginTop="8dp"/>-->
+
 
     <TextView
         android:id="@+id/textViewCreatedAt"
@@ -62,14 +56,6 @@
         android:textSize="16sp"
         android:textColor="#333333"
         android:layout_marginTop="8dp"/>
-
-    <!--<TextView
-        android:id="@+id/textViewUpdatedAt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="#333333"
-        android:layout_marginTop="8dp"/>-->
 
 
 

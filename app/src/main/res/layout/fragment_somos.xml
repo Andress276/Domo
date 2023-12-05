@@ -1,64 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
+    android:fillViewport="true"
     tools:context=".SomosFragment">
 
-    <!-- Imagen de encabezado -->
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="255dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/somos_header_image" />
-
-    <!-- Título "Quienes Somos" -->
-    <TextView
-        android:id="@+id/textViewQuienesSomos"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quienes Somos"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:textSize="40sp"
-        android:textColor="@android:color/white" />
+        android:gravity="center_horizontal">
 
-    <!-- Contenido informativo con ScrollView -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/textViewQuienesSomos"
-        android:layout_marginTop="10dp">
-
+        <!-- Cabecera verde con el título "QUIENES SOMOS" -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:background="#133A35"
+            android:layout_marginTop="300px"
+            android:gravity="center"
+            >
 
-            <!-- Ejemplo de información -->
+
+
             <TextView
+                android:id="@+id/textViewTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bienvenidos a nuestra aplicación. En 'Quienes Somos', nos esforzamos por ofrecer información relevante y útil sobre nuestra organización. Nuestra misión es... (continuar con la descripción de la organización)."
-                android:textSize="18sp"
-                android:textColor="@android:color/black" />
-
-            <!-- Más información -->
+                android:text="QUIENES SOMOS"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="0px"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:padding="16dp" />
 
         </LinearLayout>
-    </ScrollView>
 
-    <!-- Botón para acceder a más detalles o acciones -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Más Detalles"
-        android:background="@drawable/rounded_backgroundboton"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="290dp"
+            android:layout_height="195dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgs1"
+            android:layout_marginBottom="260dp"
+            android:layout_marginTop="220dp"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/textViewDescription2"
+            android:layout_width="704px"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="EQUIPO"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginTop="430dp"
+            android:typeface="serif"
+            android:layout_centerHorizontal="true" />
+
+
+        <!-- Linear Layout con imágenes y textos en dos filas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Primera fila de imágenes y textos -->
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:text="Programdores"
+                android:textColor="#000000"
+                />
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@drawable/rounded_backgroundcultivos2"
+                android:orientation="horizontal">
+
+
+
+                <!-- ImageView 2 -->
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgs2"
+                    android:text="Programador"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    />
+
+
+                <!-- TextView 2 -->
+
+                <!-- ImageView 3 -->
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgs4"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp" />
+
+                <!-- TextView 3 -->
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+
+            <TextView
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:text="Documentadores"
+                android:textColor="#FFFFFF" />
+
+            <!-- Segunda fila de imágenes y textos -->
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_backgroundcultivos2"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <!-- ImageView 4 -->
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgs3"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp" />
+
+                <!-- TextView 4 -->
+
+                <!-- ImageView 5 -->
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/imgs5"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rounded_corners"/>
+
+                <!-- TextView 5 -->
+
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <!-- Texto debajo de las imágenes -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="704dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Apasionado por lo que hacemos y con una amplia experiencia para brindarte soluciones excepcionales. Descubre cómo trabajamos juntos para ofrecerte lo mejor en cada proyecto. ¡Únete a nosotros!"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginTop="470dp"
+            android:typeface="serif"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-100dp"
+            android:layout_marginTop="139dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Documentador" />
+
+
+
+    </RelativeLayout>
+</ScrollView>
