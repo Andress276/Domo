@@ -25,20 +25,31 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="150dp"
+        android:textColor="#000000"
         android:padding="25dp"
         android:scrollbars="vertical"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/rounded_backgroundcultivos2"
+        android:background="@drawable/rounded_backgroundlogin"
         />
 
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginTop="320dp"
         android:src="@drawable/datos"
         android:layout_gravity="center_horizontal"
         />
 
+
+
+    <ImageView
+        android:layout_width="999dp"
+        android:layout_height="900dp"
+        android:layout_gravity="center"
+        android:paddingTop="950dp"
+        android:paddingBottom="175dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hojas2" />
 </FrameLayout>
 

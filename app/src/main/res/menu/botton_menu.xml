@@ -9,7 +9,7 @@
     <item
         android:id="@+id/bottom_Funcionalidad"
         android:title="Opc"
-        android:icon="@drawable/baseline_volunteer_activism_24"/>
+        android:icon="@drawable/baseline_monitor_24"/>
 
     <item
         android:id="@+id/bottom_Usuarios"

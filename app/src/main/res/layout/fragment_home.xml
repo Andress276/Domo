@@ -1,60 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".fragment.HomeFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <!-- fragment_home.xml -->
-
-    <ImageView
-        android:layout_width="290dp"
-        android:layout_height="386dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="9dp"
-        android:paddingBottom="95dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textViewWelcomeHome"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BIENVENIDO"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="74dp"
-        android:fontFamily="@font/my_custom_font"
-        android:shadowColor="#80000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:background="#80000000"
-        android:padding="16dp"/>
+        tools:context=".fragment.HomeFragment">
+
+        <!-- Imagen del logo -->
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="455dp"
+            android:layout_gravity="center"
+            android:paddingTop="60dp"
+            android:paddingBottom="195dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <!-- Texto de bienvenida -->
+        <TextView
+            android:id="@+id/textViewWelcomeHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BIENVENIDO"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/my_custom_font"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:background="#80000000"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewWelcomeHome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Larga vida para tus plantas"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="560dp"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:padding="16dp"/>
 
 
-    <TextView
-        android:id="@+id/textViewWelcomeHome2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DISEÑAMOS SISTEMAS A TU MEDIDA"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="540dp"
-        android:fontFamily="@font/my_custom_font"
-        android:shadowColor="#80000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:background="#54FAF8F8"
-        android:padding="0dp"/>
 
+        <ImageView
+            android:layout_width="580dp"
+            android:layout_height="900dp"
+            android:layout_gravity="center"
+            android:paddingTop="950dp"
+            android:paddingBottom="175dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rama" />
 
-</FrameLayout>
+    </FrameLayout>
+</ScrollView>

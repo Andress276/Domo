@@ -27,7 +27,7 @@ interface ApiService {
     @PUT("api/profile")
     fun updateProfile(@Header("Authorization") token: String, @Body updatedProfile: UserProfile): Call<UserProfile>
 
-    @GET("sensor")
+    @GET("sensorm")
     fun getSensorData(): Call<List<SensorData>>
 
     @GET("sensor/ultimalecw")

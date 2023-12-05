@@ -75,7 +75,6 @@ class CasaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_configurar -> openFragment(ConfigFragment())
             R.id.nav_calificar -> openFragment(CalifFragment())
             R.id.nav_compartir -> openFragment(CompartirFragment())
-            R.id.nav_riego -> openFragment(RiegoFragment())
 
             R.id.nav_cerrar -> {
                 // Lógica para cerrar sesión (borrar tokens, limpiar datos de sesión, etc.)

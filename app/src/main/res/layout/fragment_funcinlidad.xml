@@ -43,7 +43,7 @@
             android:layout_margin="15dp"
             android:layout_marginTop="160dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_background">
+            android:background="@drawable/rounded_backgroundlogin">
 
             <ImageView
                 android:layout_width="100dp"
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="58dp"
                 android:text="Sensores"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
@@ -72,7 +72,7 @@
             android:layout_margin="15dp"
             android:layout_marginTop="160dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_background">
+            android:background="@drawable/rounded_backgroundlogin">
 
             <ImageView
                 android:layout_width="100dp"
@@ -87,7 +87,7 @@
                 android:layout_marginBottom="58dp"
                 android:text="Registros"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
@@ -101,7 +101,7 @@
             android:layout_margin="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="190dp"
-            android:background="@drawable/rounded_background">
+            android:background="@drawable/rounded_backgroundlogin">
 
             <ImageView
                 android:layout_width="100dp"
@@ -115,7 +115,7 @@
                 android:layout_marginBottom="58dp"
                 android:text="Modo Riego"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
@@ -129,7 +129,7 @@
             android:layout_margin="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="190dp"
-            android:background="@drawable/rounded_background">
+            android:background="@drawable/rounded_backgroundlogin">
 
             <ImageView
                 android:layout_width="100dp"
@@ -143,10 +143,32 @@
                 android:layout_marginBottom="58dp"
                 android:text="Cultivos"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
+
+
     </GridLayout>
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="246dp"
+        android:layout_gravity="center"
+        android:paddingTop="150dp"
+        android:paddingBottom="175dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo3" />
+
+
+    <ImageView
+        android:layout_width="580dp"
+        android:layout_height="899dp"
+        android:layout_gravity="center"
+        android:paddingTop="850dp"
+        android:paddingBottom="175dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rama" />
+
 
 </FrameLayout>
