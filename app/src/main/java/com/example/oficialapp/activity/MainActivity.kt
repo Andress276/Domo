@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.activity
 
 import android.content.Context
 import android.content.Intent
@@ -10,8 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.oficialapp.R
 import com.example.oficialapp.data.ApiService
-import com.example.oficialapp.data.RetrofitClient
 import com.example.oficialapp.data.RetrofitClientt
 import com.example.oficialapp.response.LoginResponse
 import com.example.oficialapp.response.User

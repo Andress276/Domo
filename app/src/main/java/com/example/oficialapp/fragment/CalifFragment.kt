@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.oficialapp.R
 
 class CalifFragment : Fragment() {
 

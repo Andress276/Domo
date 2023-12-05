@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,12 +7,12 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.oficialapp.R
 import com.example.oficialapp.data.RetrofitClient
 import com.example.oficialapp.response.UserResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.oficialapp.data.ApiService
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -83,6 +83,8 @@ class RegisterActivity : AppCompatActivity() {
                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
 }
 

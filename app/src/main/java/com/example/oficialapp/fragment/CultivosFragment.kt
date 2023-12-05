@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,19 +10,14 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.oficialapp.R
+import com.example.oficialapp.adapter.CultivoAdapter
 import com.example.oficialapp.data.CultivoService
-import com.example.oficialapp.data.RetrofitClient
 import com.example.oficialapp.data.RetrofitClientCu
 import com.example.oficialapp.response.Cultivo
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 
 class CultivosFragment : Fragment() {
 

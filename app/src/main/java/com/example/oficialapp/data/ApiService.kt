@@ -30,7 +30,7 @@ interface ApiService {
     @GET("sensor")
     fun getSensorData(): Call<List<SensorData>>
 
-    @GET("sensor/ultimalec")
+    @GET("sensor/ultimalecw")
     fun obtenerDatos(): Call<List<SensorData>>
 }
 

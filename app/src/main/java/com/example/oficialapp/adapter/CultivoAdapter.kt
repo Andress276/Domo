@@ -1,10 +1,11 @@
-package com.example.oficialapp
+package com.example.oficialapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.oficialapp.R
 import com.example.oficialapp.response.Cultivo
 
 class CultivoAdapter : RecyclerView.Adapter<CultivoAdapter.CultivoViewHolder>() {

@@ -1,16 +1,25 @@
-package com.example.oficialapp
+package com.example.oficialapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.oficialapp.fragment.CalifFragment
+import com.example.oficialapp.fragment.CompartirFragment
+import com.example.oficialapp.fragment.ConfigFragment
+import com.example.oficialapp.fragment.ContacFragment
+import com.example.oficialapp.fragment.FuncinlidadFragment
+import com.example.oficialapp.fragment.HomeFragment
+import com.example.oficialapp.fragment.PerfilFragment
+import com.example.oficialapp.R
+import com.example.oficialapp.fragment.RiegoFragment
+import com.example.oficialapp.fragment.SomosFragment
+import com.example.oficialapp.fragment.UsuarioFragment
 import com.example.oficialapp.databinding.ActivityCasaBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -27,7 +36,10 @@ class CasaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setSupportActionBar(binding.toolbar)
 
-        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.app_open, R.string.app_close)
+        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar,
+            R.string.app_open,
+            R.string.app_close
+        )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 

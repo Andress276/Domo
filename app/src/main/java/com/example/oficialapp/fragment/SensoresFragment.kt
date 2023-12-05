@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.oficialapp.R
+import com.example.oficialapp.adapter.SensorAdapter
 import com.example.oficialapp.data.ApiService
 import com.example.oficialapp.response.SensorData
 import retrofit2.Call

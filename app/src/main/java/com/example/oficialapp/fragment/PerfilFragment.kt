@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.fragment
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -10,8 +10,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.oficialapp.data.ApiService
-import com.example.oficialapp.data.RetrofitClient
-import com.example.oficialapp.R
 import com.example.oficialapp.data.RetrofitClienttt
 import com.example.oficialapp.response.UserProfile
 import com.example.oficialapp.databinding.FragmentPerfilBinding

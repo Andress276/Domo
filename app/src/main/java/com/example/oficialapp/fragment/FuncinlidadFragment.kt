@@ -1,4 +1,4 @@
-package com.example.oficialapp
+package com.example.oficialapp.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.fragment.app.FragmentTransaction
+import com.example.oficialapp.R
 
 class FuncinlidadFragment : Fragment() {
 
