@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     tools:context=".fragment.ContacFragment">
 
-    <!-- Use ScrollView to make the form scrollable -->
-
-    <ImageView
-        android:layout_width="351dp"
-        android:layout_height="108dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/contact_header_image" />
-
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="160dp">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="351dp"
+            android:layout_height="108dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:paddingBottom="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contact_header_image" />
+
+        <!-- Resto de tu diseño -->
 
         <LinearLayout
             android:id="@+id/contactFormLayout"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/rounded_backgroundcontac"
+            android:layout_marginTop="185dp"
+            android:layout_marginBottom="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_backgroundlogin"
             android:orientation="vertical"
-            android:padding="36dp">
+            android:padding="40dp">
+
+            <!-- Imagen del logo -->
+            <ImageView
+                android:layout_width="147dp"
+                android:layout_height="145dp"
+                android:layout_gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coe" />
 
             <!-- Your form elements go here -->
             <EditText
@@ -41,7 +51,8 @@
                 android:layout_marginBottom="16dp"
                 android:hint="Nombre"
                 android:textColor="#000000"
-                android:textColorHint="#000000"/>
+                android:textColorHint="#000000" />
+
 
             <EditText
                 android:id="@+id/editTextEmail"
@@ -51,7 +62,7 @@
                 android:hint="Correo Electrónico"
                 android:inputType="textEmailAddress"
                 android:textColor="#000000"
-                android:textColorHint="#000000"/>
+                android:textColorHint="#000000" />
 
             <!-- Additional elements -->
 
@@ -64,7 +75,7 @@
                 android:hint="Mensaje"
                 android:minLines="3"
                 android:textColor="#000000"
-                android:textColorHint="#000000"/>
+                android:textColorHint="#000000" />
 
             <EditText
                 android:id="@+id/editTextPhoneNumber"
@@ -74,9 +85,8 @@
                 android:hint="Número de Teléfono"
                 android:inputType="number"
                 android:textColor="#000000"
-                android:textColorHint="#000000"/>
+                android:textColorHint="#000000" />
 
-            <!-- Ensure that the button is visible -->
 
             <Button
                 android:layout_width="match_parent"
@@ -84,7 +94,11 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_backgroundboton"
                 android:text="Enviar"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="0dp"/>
+
         </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
