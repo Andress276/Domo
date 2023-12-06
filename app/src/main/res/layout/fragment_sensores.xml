@@ -50,6 +50,6 @@
         android:paddingTop="950dp"
         android:paddingBottom="395dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/cod" />
+        android:src="@drawable/co" />
 </FrameLayout>
 

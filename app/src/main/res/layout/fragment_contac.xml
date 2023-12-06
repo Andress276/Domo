@@ -101,7 +101,7 @@
             android:paddingTop="950dp"
             android:paddingBottom="175dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/mont2" />
+            android:src="@drawable/mo2" />
 
 
     </RelativeLayout>

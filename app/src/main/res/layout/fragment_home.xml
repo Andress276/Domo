@@ -58,12 +58,12 @@
 
         <ImageView
             android:layout_width="800dp"
-            android:layout_height="757dp"
+            android:layout_height="863dp"
             android:layout_gravity="center"
             android:paddingTop="260dp"
             android:paddingBottom="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/mont" />
+            android:src="@drawable/mo" />
 
 
     </FrameLayout>
