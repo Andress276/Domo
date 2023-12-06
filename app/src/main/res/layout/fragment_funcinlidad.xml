@@ -162,13 +162,13 @@
 
 
     <ImageView
-        android:layout_width="580dp"
-        android:layout_height="899dp"
+        android:layout_width="800dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:paddingTop="850dp"
-        android:paddingBottom="175dp"
+        android:paddingTop="490dp"
+        android:paddingBottom="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/rama" />
+        android:src="@drawable/past" />
 
 
 </FrameLayout>

@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/my_custom_font"
         android:shadowColor="#80000000"
         android:shadowDx="2"
@@ -24,11 +24,47 @@
         android:background="#80000000"
         android:padding="16dp"/>
 
-    <!-- Botón 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Riego manual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/my_custom_font"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:background="#80FFFFFF"
+        android:padding="50dp"/>
+
+
     <Button
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manual"
-        android:layout_centerInParent="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="333dp"
+        android:text="On/Off" />
+
+
+
+
+
+    <ImageView
+        android:layout_width="800dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingTop="260dp"
+        android:paddingBottom="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/past" />
+
+
+
+
 </RelativeLayout>

@@ -5,6 +5,7 @@
     <color name="white">#CDFFFFFF</color>
     <color name="verde">#133A35</color>
 
+
     <color name="blanco">#FFFFFF</color>
     <color name="negro">#000000</color>
 
@@ -14,5 +15,17 @@
     <color name="colorAccent">#FF4081</color>
     <color name="dorado">#EABE3F</color>
 
+    <color name="rippleColor">#03FF72</color>
+    <color name="indicatorColor">#03FF72</color>
+    <color name="backgroundColor">#133A35</color>
+    <color name="mainColor">#133A35</color>
+
+
+
+    <color name="colorSelected">#FFFFFF</color>
+    <color name="colorUnselected">#AAAAAA</color>
+
+    <color name="colorBottomSelected">#FFFFFF</color>
+    <color name="colorBottomUnselected">#AAAAAA</color>
 
 </resources>

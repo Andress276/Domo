@@ -38,7 +38,7 @@ class MriegoFragment : Fragment() {
 
     private fun toggleRelay(relayState: Boolean) {
         val action = if (relayState) "on" else "off"
-        val url = "http://192.168.137.71/$action"
+        val url = "http://192.168.1.58/$action"
 
         Log.d("MriegoFragment", "URL de solicitud: $url") // Imprime la URL que se está utilizando
 

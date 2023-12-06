@@ -12,11 +12,11 @@
 
         <!-- Imagen del logo -->
         <ImageView
-            android:layout_width="290dp"
+            android:layout_width="297dp"
             android:layout_height="455dp"
             android:layout_gravity="center"
-            android:paddingTop="60dp"
-            android:paddingBottom="195dp"
+            android:paddingTop="140dp"
+            android:paddingBottom="100dp"
             android:scaleType="centerCrop"
             android:src="@drawable/logo" />
 
@@ -44,11 +44,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Larga vida para tus plantas"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:layout_marginTop="560dp"
+            android:layout_marginTop="150dp"
             android:shadowColor="#80000000"
             android:shadowDx="2"
             android:shadowDy="2"
@@ -56,15 +56,15 @@
             android:padding="16dp"/>
 
 
-
         <ImageView
-            android:layout_width="580dp"
-            android:layout_height="900dp"
+            android:layout_width="800dp"
+            android:layout_height="757dp"
             android:layout_gravity="center"
-            android:paddingTop="950dp"
-            android:paddingBottom="175dp"
+            android:paddingTop="260dp"
+            android:paddingBottom="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/rama" />
+            android:src="@drawable/mont" />
+
 
     </FrameLayout>
 </ScrollView>

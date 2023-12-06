@@ -36,7 +36,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="290dp"
         android:src="@drawable/datos"
         android:layout_gravity="center_horizontal"
         />
@@ -48,8 +48,8 @@
         android:layout_height="900dp"
         android:layout_gravity="center"
         android:paddingTop="950dp"
-        android:paddingBottom="175dp"
+        android:paddingBottom="395dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/hojas2" />
+        android:src="@drawable/cod" />
 </FrameLayout>
 
